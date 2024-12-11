@@ -324,7 +324,7 @@ abstract class PopplerUtil
     protected function shellExec()
     {
         $command = $this->makeShellCommand();
-
+        throw new \Exception($command);
         if ($this->isOutputDirRequired()) {
             $outputDir = $this->getOutputPath();
             if (!file_exists($outputDir))
